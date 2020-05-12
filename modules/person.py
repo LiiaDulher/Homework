@@ -27,60 +27,62 @@ class Person:
         Returns string representation of Person.
         :return: str
         """
-        pass
+        return self.name + "(" + str(self.birth_year) + "-" + str(self.death_year) + ")"
 
     def get_name(self):
         """
         Returns name of Person.
         :return: str
         """
-        pass
+        return self.name
 
     def get_sex(self):
         """
         Returns sex of Person.
         :return: str
         """
-        pass
+        return self.sex
 
     def get_birth_year(self):
         """
         Returns Person's birth year.
         :return: int
         """
-        pass
+        return self.birth_year
 
     def get_death_year(self):
         """
         Returns Person's death year.
         :return: int
         """
-        pass
+        return self.death_year
 
     def get_mother(self):
         """
         Returns Person's mother.
         :return: Person or None
         """
-        pass
+        return self.mother
 
     def get_father(self):
         """
         Returns Person's father.
         :return: Person or None
         """
-        pass
+        return self.father
 
     def get_partner(self):
         """
         Returns Person's partner.
         :return: Person or None
         """
-        pass
+        return self.partner
 
     def get_children(self):
         """
         Returns list of Person's children.
         :return: list of Persons or None
         """
-        pass
+        if self.children is None:
+            return []
+        return self.children
