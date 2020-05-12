@@ -29,6 +29,22 @@ class Person:
         """
         return self.name + "(" + str(self.birth_year) + "-" + str(self.death_year) + ")"
 
+    def __eq__(self, other):
+        """
+        Returns True if self equals other.
+        :param other: Person
+        :return: bool
+        """
+        return self.name == other.name
+
+    def __ne__(self, other):
+        """
+        Returns True if self not equals other.
+        :param other: Person
+        :return: bool
+        """
+        return not self == other
+
     def get_name(self):
         """
         Returns name of Person.
