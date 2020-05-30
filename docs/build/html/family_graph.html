@@ -1,0 +1,273 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>family_graph module &#8212; Dynasty 1.0 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="get_data module" href="get_data.html" />
+    <link rel="prev" title="modules" href="modules.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="module-family_graph">
+<span id="family-graph-module"></span><h1>family_graph module<a class="headerlink" href="#module-family_graph" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt id="family_graph.FamilyGraph">
+<em class="property">class </em><code class="sig-prename descclassname">family_graph.</code><code class="sig-name descname">FamilyGraph</code><a class="reference internal" href="_modules/family_graph.html#FamilyGraph"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#family_graph.FamilyGraph" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Representation of a family graph using an adjacency map.</p>
+<dl class="py class">
+<dt id="family_graph.FamilyGraph.Edge">
+<em class="property">class </em><code class="sig-name descname">Edge</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">u</span></em>, <em class="sig-param"><span class="n">v</span></em>, <em class="sig-param"><span class="n">type</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/family_graph.html#FamilyGraph.Edge"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#family_graph.FamilyGraph.Edge" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Lightweight edge structure for a graph.</p>
+<dl class="py class">
+<dt id="family_graph.FamilyGraph.Edge.RelationType">
+<em class="property">class </em><code class="sig-name descname">RelationType</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">type</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/family_graph.html#FamilyGraph.Edge.RelationType"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#family_graph.FamilyGraph.Edge.RelationType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class represents different relations between vertices.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="family_graph.FamilyGraph.Edge.endpoints">
+<code class="sig-name descname">endpoints</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/family_graph.html#FamilyGraph.Edge.endpoints"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#family_graph.FamilyGraph.Edge.endpoints" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return (u,v) tuple for vertices u and v.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="family_graph.FamilyGraph.Edge.opposite">
+<code class="sig-name descname">opposite</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">v</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/family_graph.html#FamilyGraph.Edge.opposite"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#family_graph.FamilyGraph.Edge.opposite" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the vertex that is opposite v on this edge.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="family_graph.FamilyGraph.Edge.type">
+<code class="sig-name descname">type</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/family_graph.html#FamilyGraph.Edge.type"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#family_graph.FamilyGraph.Edge.type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return element associated with this edge.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="family_graph.FamilyGraph.Vertex">
+<em class="property">class </em><code class="sig-name descname">Vertex</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">person</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/family_graph.html#FamilyGraph.Vertex"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#family_graph.FamilyGraph.Vertex" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Lightweight vertex structure for a graph.</p>
+<dl class="py attribute">
+<dt id="family_graph.FamilyGraph.Vertex.e">
+<code class="sig-name descname">e</code><a class="headerlink" href="#family_graph.FamilyGraph.Vertex.e" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="family_graph.FamilyGraph.Vertex.element">
+<code class="sig-name descname">element</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/family_graph.html#FamilyGraph.Vertex.element"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#family_graph.FamilyGraph.Vertex.element" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return element associated with this vertex.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="family_graph.FamilyGraph.Vertex.l">
+<code class="sig-name descname">l</code><a class="headerlink" href="#family_graph.FamilyGraph.Vertex.l" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="family_graph.FamilyGraph.Vertex.m">
+<code class="sig-name descname">m</code><a class="headerlink" href="#family_graph.FamilyGraph.Vertex.m" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="family_graph.FamilyGraph.Vertex.n">
+<code class="sig-name descname">n</code><a class="headerlink" href="#family_graph.FamilyGraph.Vertex.n" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="family_graph.FamilyGraph.Vertex.t">
+<code class="sig-name descname">t</code><a class="headerlink" href="#family_graph.FamilyGraph.Vertex.t" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py method">
+<dt id="family_graph.FamilyGraph.adjacent_vertices">
+<code class="sig-name descname">adjacent_vertices</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">v</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/family_graph.html#FamilyGraph.adjacent_vertices"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#family_graph.FamilyGraph.adjacent_vertices" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns all adjacent vertices if type if None,
+otherwise returns vertices, which connected with special type of edge.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="family_graph.FamilyGraph.degree">
+<code class="sig-name descname">degree</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">v</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/family_graph.html#FamilyGraph.degree"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#family_graph.FamilyGraph.degree" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return number of outgoing edges incident to vertex v in the graph.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="family_graph.FamilyGraph.draw">
+<code class="sig-name descname">draw</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">vertex</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/family_graph.html#FamilyGraph.draw"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#family_graph.FamilyGraph.draw" title="Permalink to this definition">¶</a></dt>
+<dd><p>Draws graph from given vertex down.
+:param vertex: Vertex
+:return: dict</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="family_graph.FamilyGraph.edge_count">
+<code class="sig-name descname">edge_count</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/family_graph.html#FamilyGraph.edge_count"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#family_graph.FamilyGraph.edge_count" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the number of edges in the graph.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="family_graph.FamilyGraph.edges">
+<code class="sig-name descname">edges</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/family_graph.html#FamilyGraph.edges"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#family_graph.FamilyGraph.edges" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a set of all edges of the graph.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="family_graph.FamilyGraph.get_edge">
+<code class="sig-name descname">get_edge</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">u</span></em>, <em class="sig-param"><span class="n">v</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/family_graph.html#FamilyGraph.get_edge"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#family_graph.FamilyGraph.get_edge" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the edge from u to v, or None if not adjacent.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="family_graph.FamilyGraph.graph_intersection">
+<code class="sig-name descname">graph_intersection</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">other</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/family_graph.html#FamilyGraph.graph_intersection"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#family_graph.FamilyGraph.graph_intersection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns True if at least 1 vertex from self is in other.
+:param other: FamilyGraph
+:return: bool</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="family_graph.FamilyGraph.incident_edges">
+<code class="sig-name descname">incident_edges</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">v</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/family_graph.html#FamilyGraph.incident_edges"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#family_graph.FamilyGraph.incident_edges" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return all outgoing edges incident to vertex v in the graph.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="family_graph.FamilyGraph.insert_edge">
+<code class="sig-name descname">insert_edge</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">u</span></em>, <em class="sig-param"><span class="n">v</span></em>, <em class="sig-param"><span class="n">type</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/family_graph.html#FamilyGraph.insert_edge"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#family_graph.FamilyGraph.insert_edge" title="Permalink to this definition">¶</a></dt>
+<dd><p>Insert and return a new Edge from u to v with auxiliary element x.
+Raise a ValueError if u and v are not vertices of the graph.
+Raise a ValueError if u and v are already adjacent.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="family_graph.FamilyGraph.insert_vertex">
+<code class="sig-name descname">insert_vertex</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/family_graph.html#FamilyGraph.insert_vertex"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#family_graph.FamilyGraph.insert_vertex" title="Permalink to this definition">¶</a></dt>
+<dd><p>Insert and return a new Vertex with element x.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="family_graph.FamilyGraph.vertex_count">
+<code class="sig-name descname">vertex_count</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/family_graph.html#FamilyGraph.vertex_count"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#family_graph.FamilyGraph.vertex_count" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the number of vertices in the graph.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="family_graph.FamilyGraph.vertices">
+<code class="sig-name descname">vertices</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/family_graph.html#FamilyGraph.vertices"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#family_graph.FamilyGraph.vertices" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return an iteration of all vertices of the graph.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Dynasty</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">modules</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">family_graph module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="get_data.html">get_data module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="get_names.html">get_names module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="main.html">main module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="person.html">person module</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">modules</a><ul>
+      <li>Previous: <a href="modules.html" title="previous chapter">modules</a></li>
+      <li>Next: <a href="get_data.html" title="next chapter">get_data module</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, Liia Dulher.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.0.4</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/family_graph.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

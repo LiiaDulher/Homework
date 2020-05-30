@@ -1,0 +1,179 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>main module &#8212; Dynasty 1.0 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="person module" href="person.html" />
+    <link rel="prev" title="get_names module" href="get_names.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="module-main">
+<span id="main-module"></span><h1>main module<a class="headerlink" href="#module-main" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt id="main.Menu">
+<em class="property">class </em><code class="sig-prename descclassname">main.</code><code class="sig-name descname">Menu</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">lst</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/main.html#Menu"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#main.Menu" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class to get only certain choices.</p>
+<dl class="py method">
+<dt id="main.Menu.get_selection">
+<code class="sig-name descname">get_selection</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/main.html#Menu.get_selection"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#main.Menu.get_selection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets user’s selection.
+:return: str</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="main.Menu.get_str_repr">
+<code class="sig-name descname">get_str_repr</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/main.html#Menu.get_str_repr"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#main.Menu.get_str_repr" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates string with all possible choices.
+:return: str</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="main.Menu.read">
+<code class="sig-name descname">read</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/main.html#Menu.read"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#main.Menu.read" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reads user’s choice.
+:return: str</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt id="main.extend_graph">
+<code class="sig-prename descclassname">main.</code><code class="sig-name descname">extend_graph</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">graph</span></em>, <em class="sig-param"><span class="n">v_name</span></em>, <em class="sig-param"><span class="n">i</span></em>, <em class="sig-param"><span class="n">end</span></em>, <em class="sig-param"><span class="n">reverse</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/main.html#extend_graph"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#main.extend_graph" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extends graph with needed data from given vertex.
+:param graph: FamilyGraph
+:param v_name: Vertex
+:param i: int
+:param end: int
+:param reverse: bool
+:return: None</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="main.get_name">
+<code class="sig-prename descclassname">main.</code><code class="sig-name descname">get_name</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/main.html#get_name"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#main.get_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get name from user.
+:return: str</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="main.get_sex">
+<code class="sig-prename descclassname">main.</code><code class="sig-name descname">get_sex</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/main.html#get_sex"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#main.get_sex" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns sex of person with given name.
+:param name: str
+:return: str</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="main.main">
+<code class="sig-prename descclassname">main.</code><code class="sig-name descname">main</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/main.html#main"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#main.main" title="Permalink to this definition">¶</a></dt>
+<dd><p>Main function.
+:return: None</p>
+</dd></dl>
+
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Dynasty</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">modules</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="family_graph.html">family_graph module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="get_data.html">get_data module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="get_names.html">get_names module</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">main module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="person.html">person module</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">modules</a><ul>
+      <li>Previous: <a href="get_names.html" title="previous chapter">get_names module</a></li>
+      <li>Next: <a href="person.html" title="next chapter">person module</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, Liia Dulher.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.0.4</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/main.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
